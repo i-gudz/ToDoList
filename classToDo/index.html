@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TODO</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div id="root">
+		<h1>TODO</h1>
+		<div class="added-task">
+
+			<form onsubmit="createNewTask(event)">
+				<div class="input-field">
+					<input id="title-task" type="text" name="titleTask" onselect="showBlock()" autocomplete="off">
+					<label for="title-task">Title Task</label>
+				</div>
+
+				<div class="description input-field" id="myShowBlock" >
+					<textarea id="description-text" class="materialize-textarea" name="descriptionTask"></textarea>
+					<label for="description-text">Textarea</label>
+
+					<div class="input-field">
+						<input id="datepicker" class="datepicker" name="dateTask" placeholder="Date"/>
+					</div>
+
+					<p class="range-field priority">
+						<label for="priority">Priority</label>
+						<input type="range" id="priority" min="0" max="10" title="priority" />
+					</p>
+
+					<button class="waves-effect waves-light btn" type="submit">Add task</button>
+				</div>
+
+
+			</form>
+
+		</div>
+
+		<div class="show_list_task">
+			<div class="sort_block">
+				<p>Sorting: </p>
+				<select onchange="sortTaskList()" id="sortElement">
+					<option value="dateUp">By date ↑</option>
+					<option value="dateDown">By date ↓</option>
+					<option value="priorityUp">By priority ↑</option>
+					<option value="priorityDown">By priority ↓</option>
+				</select>
+			</div>
+			<div class="filter-group">
+				<button class="waves-effect waves-light btn grey darken-2" onclick="filterTaskList('all')">All</button>
+				<button class="waves-effect waves-light btn blue darken-2" onclick="filterTaskList('current')">Current</button>
+				<button class="waves-effect waves-light btn red darken-4" onclick="filterTaskList('expired')">Expired</button>
+				<button class="waves-effect waves-light btn green darken-3" onclick="filterTaskList('completed')">Completed</button>
+			</div>
+
+			<ul class="collapsible" id="collapsible"></ul>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</body>
+</html>

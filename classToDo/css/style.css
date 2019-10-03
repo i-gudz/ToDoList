@@ -1,0 +1,114 @@
+body{
+	margin:0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#root{
+	width: 50%;
+	height: auto;
+	background-color: #eeeeee;
+	border-radius: 10px;
+	padding: 30px;
+	box-sizing: border-box;
+}
+#root h1{
+	text-align: center;
+
+}
+
+.description{
+	text-align: end;
+overflow: hidden;
+	transition: 1s;
+	height: 0;
+}
+
+.datepicker{
+	margin-right: 10px;
+}
+
+
+
+.date{
+	margin-right: 20px;
+	border-bottom: 1px solid #26a69a;
+	width: 150px;
+	display: block;
+	text-align: left;
+	font-weight: bold;
+}
+.group{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.collection{
+	border: none;
+}
+
+.collection .collection-item{
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+.collapsible-header{
+	display: flex;
+	justify-content: space-between;
+}
+
+.collapsible-header i{
+	color: blue;
+}
+
+.collapsible-body{
+	position: relative;
+}
+
+.red-task-icon{
+	color: red;
+}
+
+.green-task-icon{
+	color: green;
+}
+
+.filter-group {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 0 20px 0;
+}
+
+form .priority{
+	text-align: start;
+}
+
+form .priority label{
+	font-size: 16px;
+}
+
+.priority-circle{
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #26a69a;
+	color: #ffffff;
+}
+
+.sort_block{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
